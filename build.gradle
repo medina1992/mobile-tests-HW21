@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
+    // Appium
+    implementation 'io.appium:java-client:9.1.0'
+
+    // Selenide для Appium
+    implementation 'com.codeborne:selenide-appium:7.2.3'
+
+    // Selenide
+    implementation 'com.codeborne:selenide:7.2.3'
+}
+test {
+    useJUnitPlatform()   // важно для запуска JUnit 5
+}
